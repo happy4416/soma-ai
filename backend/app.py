@@ -7,7 +7,7 @@ from services.vector_service import VectorService
 from services.ollama_service import OllamaService
 from services.crawler_service import CrawlerService
 
-app = FastAPI(title="경북소프트웨어마이스터고 도우미 AI")
+app = FastAPI(title="소마 AI - 경북소프트웨어마이스터고 도우미")
 
 # CORS 설정
 app.add_middleware(
@@ -47,7 +47,7 @@ async def startup_event():
 
 @app.get("/")
 async def root():
-    return {"message": "경북소프트웨어마이스터고 도우미 AI", "status": "running"}
+    return {"message": "소마 AI - 경북소프트웨어마이스터고 도우미", "status": "running"}
 
 @app.get("/api/health")
 async def health_check():
